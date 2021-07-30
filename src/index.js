@@ -21,14 +21,20 @@ class App extends React.Component{
 
 
     render(){
-
-        return(
-        <div>
-            Latitude: {this.state.lat}
-        <br />
-            Error: {this.state.errMsg}
-        </div>
-        )
+        // if no latitude, but have a error
+        if(this.state.errMsg && !this.state.lat){
+            return (
+                <div>Error: {this.state.errMsg}</div>
+            )
+        }
+        // if no error and a latitude
+        if(!this.state.errMsg && this.state.lat){
+            return(
+                <div>Latitude: {this.state.lat}</div>
+            )
+        }
+        // if both checks failed, no lat or error
+        return <div>Loading...!</div>
     }
 
 }
