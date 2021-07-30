@@ -7,12 +7,14 @@ class App extends React.Component{
         super(props);
 
         this.state = {
-            lat: '',
+            lat: null,
+            errMsg: '',
+
         };
 
         window.navigator.geolocation.getCurrentPosition(
             (position) => this.setState({lat: position.coords.latitude }),
-            (err) => console.log(err)
+            (err) => this.setState({errMsg: err.message })
         );
     }
 
@@ -20,7 +22,7 @@ class App extends React.Component{
 
     render(){
 
-        return <div>Latitude: </div>
+        return <div>Latitude: {this.state.lat} </div>
     }
 
 }
