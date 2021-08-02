@@ -12,11 +12,18 @@ const getSeason = (lat, month) =>{
 const SeasonDisplay = (props) =>{
     const season = getSeason(props.lat, new Date().getMonth());
 
-    console.log(season);
 
-    return(
-        <div>{props.lat}</div>
-    );
+    // may either save the ternary expression to a variable or place it within the return statement below
+    // without saving to a variable
+    const text = season === 'winter' ? 'Burr its chilly' : 'Lets go to the beach'
+
+
+
+    return (
+        <h1>
+        {text}
+        </h1>
+    )
 }
 
 export default SeasonDisplay;
