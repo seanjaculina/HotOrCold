@@ -27,7 +27,7 @@ class App extends React.Component{
         // if no error and a latitude
         if(!this.state.errMsg && this.state.lat){
             return(
-                <div>Latitude: {this.state.lat}</div>
+                <SeasonDisplay lat={this.state.lat}/>
             )
         }
         // if both checks failed, no lat or error
