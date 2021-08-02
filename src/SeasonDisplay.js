@@ -17,12 +17,18 @@ const SeasonDisplay = (props) =>{
     // without saving to a variable
     const text = season === 'winter' ? 'Burr its chilly' : 'Lets go to the beach'
 
+    // getting an icon to display using semantic ui, first piece of logic is based off whether it is summer or winter
+    // if season is equal to winter, return the string snowflake else return the string sun
+    const icon = season === 'winter' ? 'snowflake' : 'sun'
 
 
     return (
-        <h1>
-        {text}
-        </h1>
+        // template literal, grabbing the value of icon and adding a classname of icon
+        <div>
+            <i className={`${icon} icon`}/>
+            <h1>{text}</h1>
+            <i className={`${icon} icon`}/>
+        </div>
     )
 }
 
