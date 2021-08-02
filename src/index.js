@@ -12,12 +12,16 @@ class App extends React.Component{
 
         };
 
+
+    }
+
+    // data loading goes into componentDidMount over the constructor as 'best practice'
+    componentDidMount(){
         window.navigator.geolocation.getCurrentPosition(
             (position) => this.setState({lat: position.coords.latitude }),
             (err) => this.setState({errMsg: err.message })
         );
     }
-
 
 
     render(){
