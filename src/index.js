@@ -3,17 +3,10 @@ import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
 
 class App extends React.Component{
-    constructor(props){
-        super(props);
-
-        this.state = {
-            lat: null,
-            errMsg: '',
-
-        };
-
-
-    }
+    state = {
+        lat: null,
+        errMsg: '',
+    };
 
     // data loading goes into componentDidMount over the constructor as 'best practice'
     componentDidMount(){
