@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './SeasonDisplay.css'
 // creating a configuration object
 // the keys in this object match the strings within the getSeason method
 const seasonConfig = {
@@ -42,10 +42,11 @@ const SeasonDisplay = (props) =>{
 
     return (
         // template literal, grabbing the value of icon and adding a classname of icon
-        <div>
-            <i className={`${iconName} icon`}/>
+        // root element has a className equal to the component name
+        <div className={`season-display ${season}`}>
+            <i className={`${iconName} icon massive icon-left`}/>
             <h1>{text}</h1>
-            <i className={`${iconName} icon`}/>
+            <i className={`${iconName} icon massive icon-right`}/>
         </div>
     )
 }

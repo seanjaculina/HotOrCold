@@ -1,0 +1,36 @@
+.icon-left{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.icon-right{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* selecting element of winter with a child element of an icon */
+.season-display.winter i {
+    color: blue;
+}
+
+/* selecting element of summer with a child element of an icon */
+.season-display.summer i {
+    color: red;
+}
+/* this styling will center the text in the middle of the screen */
+.season-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.winter{
+    background-color: aliceblue;
+}
+
+.summer{
+    background-color: orange;
+}
