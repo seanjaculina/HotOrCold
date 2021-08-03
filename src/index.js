@@ -31,7 +31,7 @@ class App extends React.Component{
             )
         }
         // if both checks failed, no lat or error
-        return <LoadingDisplay/>
+        return <LoadingDisplay message="Please accept location request"/>;
     }
 
 }
