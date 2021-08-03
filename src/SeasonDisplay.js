@@ -1,5 +1,6 @@
 import React from 'react';
 import './SeasonDisplay.css'
+
 // creating a configuration object
 // the keys in this object match the strings within the getSeason method
 const seasonConfig = {
