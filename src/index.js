@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
-
+import LoadingDisplay from './LoadingDisplay';
 class App extends React.Component{
     state = {
         lat: null,
@@ -31,7 +31,7 @@ class App extends React.Component{
             )
         }
         // if both checks failed, no lat or error
-        return <div>Loading...!</div>
+        return <LoadingDisplay/>
     }
 
 }
